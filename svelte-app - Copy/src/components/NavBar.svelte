@@ -21,6 +21,5 @@
   <ul class="menu-list">
     <Link to="/products" {getProps}>Products</Link>
     <Link to="/about" {getProps}>About</Link>
-    <Link to="/authenticated/MFA" {getProps}>MFA Test</Link>
   </ul>
 </nav>

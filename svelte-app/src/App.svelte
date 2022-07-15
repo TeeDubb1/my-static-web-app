@@ -3,6 +3,7 @@
   import { Router, Link, Route } from 'svelte-routing';
   import About from './About.svelte';
   import Products from './products/Products.svelte';
+  import MFA from './authenticated/MFA.svelte';
 
   import { HeaderBar, NavBar, PageNotFound, Redirect } from './components';
 
@@ -15,12 +16,10 @@
     <NavBar />
     <main class="column">
       <div>
-        <Route path="/">
-          <Redirect path="/products" />
-        </Route>
-        <Route path="/products" component={Products} />
-        <Route path="/about" component={About} />
-        <Route path="**" component={PageNotFound} />
+        <!-- <Route path="/">
+          <Redirect path="/authenticated/MFA" />
+        </Route> -->
+        <Route path="/authenticated/MFA" component={MFA} />
       </div>
     </main>
   </Router>
